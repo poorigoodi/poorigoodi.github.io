@@ -49,10 +49,10 @@ export const AboutSection: React.FC = () => {
               I am <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Pooria Goodarzi</strong>, an AI Engineer, Machine Learning Specialist, and active researcher dedicated to designing, evaluating, and deploying production-oriented artificial intelligence systems that bridge academic rigor with real-world reliability.
             </p>
             <p>
-              My engineering focus spans end-to-end <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Retrieval-Augmented Generation (RAG)</strong> pipelines, multi-document knowledge graphs, <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Computer Vision &amp; image processing</strong>, and systematic <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>LLM evaluation &amp; benchmarking</strong>. Beyond visual and generative text architectures, I build complete <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Speech AI pipelines</strong> covering Text-to-Speech (TTS), Speech-to-Text (STT), and low-latency Speech-to-Speech (S2S) conversational systems.
+              My engineering focus spans end-to-end <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Retrieval-Augmented Generation (RAG)</strong> pipelines, multi-document knowledge graphs, and systematic <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>LLM evaluation &amp; benchmarking</strong>. Beyond visual and generative text architectures, I build complete <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Speech AI pipelines</strong> covering Text-to-Speech (TTS), Speech-to-Text (STT), and low-latency Speech-to-Speech (S2S) conversational systems.
             </p>
             <p>
-              Driven by curiosity in deep learning algorithms, <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Persian Natural Language Processing (ParsBERT)</strong>, Medical AI clinical systems, and modern cloud &amp; mobile software tooling, I build end-to-end solutions engineered for scale.
+              Driven by curiosity in deep learning algorithms, <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>Persian Natural Language Processing</strong>, Medical AI clinical systems, and modern cloud &amp; mobile software tooling, I build end-to-end solutions engineered for scale.
             </p>
           </div>
 
