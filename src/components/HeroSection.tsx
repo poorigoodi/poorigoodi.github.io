@@ -212,7 +212,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPulseNodes, onOpenRe
                   <span className="font-semibold">current_focus</span>
                 </div>
                 <div className="pl-4 mt-1 text-coral font-medium">
-                  RAG | LLMs | Computer Vision | Speech AI
+                  RAG | LLMs | NLP | Speech AI
                 </div>
               </div>
 
