@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Deploy Portfolio to GitHub Pages
 
 on:
@@ -13,35 +12,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
-=======
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: ["main"]
->>>>>>> bbc03f132e301dd247644b6b1b600d9abb2d5940
+  group: github-pages
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # مراحل بیلد پروژه (مثلاً نصب وابستگی‌ها و ساخت فایل‌های خروجی)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-      - name: Upload artifact
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # یا مسیر پوشه خروجی پروژه شما (مثل build)
+          path: ./dist
 
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
