@@ -1,4 +1,3 @@
-
 name: Deploy Portfolio to GitHub Pages
 
 on:
@@ -13,8 +12,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
