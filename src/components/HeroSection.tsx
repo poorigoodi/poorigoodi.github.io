@@ -222,9 +222,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPulseNodes, onOpenRe
                   <span className="font-semibold">languages_supported</span>
                 </div>
                 <div className="pl-4 mt-1 flex items-center gap-2 flex-wrap" style={{ color: 'var(--text-secondary)' }}>
-                  <span>English (NLP)</span>
+                  <span>English</span>
                   <span className="opacity-40">•</span>
-                  <span className="font-sans" dir="rtl">پردازش زبان طبیعی فارسی (ParsBERT)</span>
                 </div>
               </div>
 
