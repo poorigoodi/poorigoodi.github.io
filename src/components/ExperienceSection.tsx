@@ -1,6 +1,6 @@
 import React from 'react';
-import { Award, Calendar, CheckCircle2, PenLine, Trophy } from 'lucide-react';
-import { HACKATHON_HIGHLIGHTS, SPIN_RESPONSIBILITIES } from '../data/portfolioData';
+import { Calendar, CheckCircle2, PenLine } from 'lucide-react';
+import { SPIN_RESPONSIBILITIES } from '../data/portfolioData';
 
 interface ExperienceSectionProps {
   editMode: boolean;
@@ -132,72 +132,6 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         </div>
       </div>
 
-      {/* Competitions & Hackathons Highlights */}
-      <div className="space-y-6">
-        <div className="flex items-center justify-between gap-4 reveal">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-10 h-10 rounded-2xl flex items-center justify-center border border-coral/30"
-              style={{ background: 'var(--accent-soft)' }}
-            >
-              <Trophy className="w-5 h-5 text-coral" />
-            </div>
-            <div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl">
-                AI Competitions &amp; Hackathon Highlights
-              </h3>
-              <p className="font-mono text-xs" style={{ color: 'var(--text-muted)' }}>
-                Applied Vision in Sports/Health, Rapid Multimodal Prototyping &amp; NLP Challenges
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {HACKATHON_HIGHLIGHTS.map((hack, idx) => (
-            <div
-              key={hack.id}
-              className={`liquid-glass liquid-glass-interactive rounded-3xl p-6 flex flex-col justify-between reveal ${
-                idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : ''
-              }`}
-            >
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="px-2.5 py-1 rounded-lg liquid-pill font-mono text-[10px] uppercase tracking-wider text-coral font-semibold">
-                    {hack.tag}
-                  </span>
-                  <Award className="w-4 h-4 text-coral shrink-0" />
-                </div>
-                <h4 className="font-display font-bold text-lg leading-snug mb-1.5">
-                  {hack.title}
-                </h4>
-                <p className="font-mono text-[11px] text-coral/90 mb-3">{hack.arena}</p>
-                <p
-                  className="text-sm leading-relaxed mb-5"
-                  style={{ color: 'var(--text-secondary)' }}
-                >
-                  {hack.description}
-                </p>
-              </div>
-
-              <div
-                className="flex flex-wrap gap-1.5 pt-4 border-t"
-                style={{ borderColor: 'var(--glass-border)' }}
-              >
-                {hack.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 rounded-lg font-mono text-[11px] liquid-pill"
-                    style={{ color: 'var(--text-secondary)' }}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
